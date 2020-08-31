@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import checkout from './components/checkout.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    checkout
   }
 }
 </script>

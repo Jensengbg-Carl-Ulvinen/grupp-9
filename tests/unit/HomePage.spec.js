@@ -9,6 +9,10 @@ describe('HomePage.vue', () => {
         wrapper = shallowMount(HomePage);
     })
 
+it('home-page should exist', () => {
+    const home = wrapper.findComponent(HomePage);
+    expect(home.exists()).toBe(true);
+})
 
 it('should display nav-bar when rendered', () => {
     const expected = 'Webshop för iphone skal';
@@ -17,4 +21,13 @@ it('should display nav-bar when rendered', () => {
 
     expect(text).toBe(expected);
     })
+
+it('li-items should exist', () => {
+    const array = wrapper.findAll('ul');
+    
+    expect(array.exists()).toBe(true);
+})
+
+
+
 })

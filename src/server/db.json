@@ -1,3 +1,34 @@
 {
-    "products": []
+    "products": [
+        {
+            "id": 0,
+            "name": "iphone8-shell",
+            "price": "25$"
+        },
+        {
+            "id": 1,
+            "name": "iphone8-shell",
+            "price": "25$"
+        },
+        {
+            "id": 2,
+            "name": "iphone8-shell",
+            "price": "25$"
+        },
+        {
+            "id": 3,
+            "name": "iphone8-shell",
+            "price": "25$"
+        },
+        {
+            "id": 4,
+            "name": "iphone8-shell",
+            "price": "25$"
+        },
+        {
+            "id": 5,
+            "name": "iphone8-shell",
+            "price": "25$"
+        }
+    ]
 }

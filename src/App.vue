@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <home-page/>
-    <checkout/>
+    <CheckOut/>
   </div>
 </template>
 

@@ -1,6 +1,7 @@
 import {shallowMount} from '@vue/test-utils'
 import HomePage from '@/components/HomePage.vue'
 
+//Kör json-server ./src/server/db.json i terminalen för att starta servern
 
 //Globals
 describe('HomePage.vue', () => {
@@ -22,10 +23,10 @@ it('should display nav-bar when rendered', () => {
     expect(text).toBe(expected);
     })
 
-it('li-items should exist', () => {
-    const array = wrapper.findAll('ul');
+it('ul should exist', () => {
+    const list = wrapper.findAll('ul');
     
-    expect(array.exists()).toBe(true);
+    expect(list.exists()).toBe(true);
 })
 
 

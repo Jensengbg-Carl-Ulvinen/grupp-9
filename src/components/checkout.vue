@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'checkout',
+  name: 'CheckOut',
   props: {
     msg: String
   }

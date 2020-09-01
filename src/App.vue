@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <checkout msg="this is the starting point"/>
+    <home-page/>
+    <checkout/>
   </div>
 </template>
 
 <script>
-import checkout from './components/checkout.vue'
-
+import HomePage from './components/HomePage.vue';
+import CheckOut from './components/CheckOut.vue';
 export default {
   name: 'App',
   components: {
-    checkout
+    HomePage,
+    CheckOut
   }
 }
 </script>

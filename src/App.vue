@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <checkout msg="this is the starting point"/>
   </div>
 </template>
 

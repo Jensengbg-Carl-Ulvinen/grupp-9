@@ -3,7 +3,7 @@
         <img id="prodImg" 
         src="https://loremflickr.com/cache/resized/65535_49931829257_566d9ba824_c_640_480_nofilter.jpg" />
         
-        <button id="basketBtn" />
+        <button id="basketBtn" @click="toCheckout">Lägga till</button>
         <button id="addBtn" />
         <button id="remBtn" />
 
@@ -47,6 +47,24 @@
 
         <section class="blockPrice">
             <p id="price">3000</p>
+        </section>
+
+        <section class="blockAbout">
+            <p id="prodInfo">Ett mobilskal med korthållare är snyggt och praktiskt på samma gång. 
+                I detta pris ingår både mobilskal och kortfickan. Dessa skal är magiskt fina!
+
+                Mixa och matcha vilka färger du vill, välj i rullistan. 
+
+                Detaljer: 
+
+                - 100% veganskt
+                - Tryck i guld, silver eller rosé
+                - Kortfickan ingår
+                - Max fem bokstäver</p>
+        </section>
+
+        <section class="blockDelivery">
+            <p id="delInfo">Leverans inom 1- 4 arbetsdagar inom Sverige</p>
         </section>
 
     </div>

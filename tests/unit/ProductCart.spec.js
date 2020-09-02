@@ -1,5 +1,7 @@
 import { mount, shallowMount } from '@vue/test-utils'
 import ProductCart from '@/components/ProductCart.vue'
+import checkout from '@/components/checkout.vue'
+
 
 // describe('', () => {
 //     //cart need to testing by ID of product??
@@ -9,7 +11,23 @@ import ProductCart from '@/components/ProductCart.vue'
 //     })
 // })
 
-describe('ProductCart.vue', () => {
+describe('Functional tests for ProductCart', () => {
+    let wrapper;
+    beforeEach(() => {
+        wrapper = shallowMount(ProductCart);
+    })
+
+    it('should adding the product to checkout when clicked button "Lägga till"', async () => {
+        wrapper = mount(checkout)
+        const basketBtn = wrapper.find('#basketBtn')
+        await basketBtn.trigger('click')
+
+        const checkComp = wrapper.findComponent(checkout)
+        expect(checkComp.exists()).toBe(true)
+    })
+})
+
+describe('UX/UI tests for ProductCart.vue', () => {
     let wrapper;
     beforeEach(() => {
         wrapper = shallowMount(ProductCart);
@@ -55,4 +73,13 @@ describe('ProductCart.vue', () => {
         expect(price.element.id).toBe('price')
     })
 
+    it('should display information about product', () => {
+        const prodInfo = wrapper.find('#prodInfo')
+        expect(prodInfo.element.id).toBe('prodInfo')
+    })
+
+    it('should display information about delivery', () => {
+        const delInfo = wrapper.find('#delInfo')
+        expect(delInfo.element.id).toBe('delInfo')
+    })
 })

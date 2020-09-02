@@ -18,3 +18,14 @@ it('should display nav-bar when rendered', () => {
     expect(text).toBe(expected);
     })
 })
+
+//Kolla om Shoppingcart knappen kommer upp -Carl
+
+it('should display a shoppingcart button in nav', () => {
+
+  const shoppingCartButton = wrapper.find('button_checkout');
+
+  const expected = shoppingCartButton.exists();
+
+  expect(shoppingCartButton).toBe(expected)
+})

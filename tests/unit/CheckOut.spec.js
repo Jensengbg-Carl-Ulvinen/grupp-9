@@ -8,7 +8,9 @@ describe('CheckOut.vue', () => {
         wrapper = shallowMount(CheckOut);
     })
 
+//Kolla om CheckOut komponenten finns -Carl
+
 it('CheckOut page should exist', () => {
-    const checkingout = wrapper.findComponent(CheckOut;
+    const checkingout = wrapper.findComponent(CheckOut);
     expect(checkingout.exists()).toBe(true);
 })

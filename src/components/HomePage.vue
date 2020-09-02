@@ -3,7 +3,7 @@
       <nav class="wrapper">
         <h1 class="heading"> Webshop för iphone skal</h1>
         <button @click="openCheckOut()" class="button_checkout">
-        <img class="shoppingcart" src="../assets/img/shoppingcart.png" />
+        <img class="shoppingcart" src="../assets/img/shopping-cart-solid.svg" />
       </button>
       </nav>
   </div>

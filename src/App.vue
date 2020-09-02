@@ -5,6 +5,7 @@
     <!-- <transition name="fade">
       <ProductCart v-if="openProdCart" @closeProdCart="prodCart" class="prodCartOverlay" />
     </transition> -->
+    <checkout/>
   </div>
 </template>
 
@@ -12,11 +13,13 @@
 import HomePage from './components/HomePage.vue';
 import ProductCart from './components/ProductCart.vue';
 
+import CheckOut from './components/CheckOut.vue';
 export default {
   name: 'App',
   components: {
     HomePage,
     ProductCart
+    CheckOut
   }
   // data() {
   //   return {

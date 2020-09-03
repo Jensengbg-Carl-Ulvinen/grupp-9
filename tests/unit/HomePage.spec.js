@@ -1,4 +1,4 @@
-import {shallowMount} from '@vue/test-utils'
+import {mount, shallowMount} from '@vue/test-utils'
 import HomePage from '@/components/HomePage.vue'
 
 //Kör json-server ./src/server/db.json i terminalen för att starta servern
@@ -29,6 +29,27 @@ it('ul should exist', () => {
     expect(list.exists()).toBe(true);
 })
 
+it('cart image should exist when rendered', () => {
+    const expected = wrapper.find('.cart');
+    expect(expected.exists()).toBe(true);
+})
+
+it('should display 0 on homepage when rendered', () => {
+    const expectedValue = 0;
+
+    const element = wrapper.find('.counter');
+    const actualValue = Number(element.text());
+
+    expect(actualValue).toBe(expectedValue);
+})
+
+
+/*it('emit event', async () => {
+    wrapper = mount(HomePage);
+
+    await wrapper.vm.emitEvent()
+    console.log(wrapper.emitted())
+})*/
 
 
 })

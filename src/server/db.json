@@ -30,5 +30,6 @@
             "name": "iphone8-shell",
             "price": "25$"
         }
-    ]
+    ],
+    "cart": []
 }

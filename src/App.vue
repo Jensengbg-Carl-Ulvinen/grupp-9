@@ -1,27 +1,19 @@
 <template>
   <div id="app">
     <home-page/>
-    <ProductCart />
-    <!-- <transition name="fade">
-      <ProductCart v-if="openProdCart" @closeProdCart="prodCart" class="prodCartOverlay" />
-    </transition> -->
-    <checkout/>
+    <ProductCart/>
+    <CheckOut/>
   </div>
 </template>
 
 <script>
 import HomePage from './components/HomePage.vue';
-import ProductCart from './components/ProductCart.vue';
-
-import CheckOut from './components/CheckOut.vue';
 export default {
   name: 'App',
   components: {
-    HomePage,
-    ProductCart
-    CheckOut
+    HomePage
   }
-  // data() {
+   // data() {
   //   return {
   //     openProdCart: false
   //   };

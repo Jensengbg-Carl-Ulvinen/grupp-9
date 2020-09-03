@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <home-page/>
-    <ProductCart />
-    <!-- <transition name="fade">
+    <ProductCart /> 
+    <!-- <transition name="">
       <ProductCart v-if="openProdCart" @closeProdCart="prodCart" class="prodCartOverlay" />
     </transition> -->
   </div>

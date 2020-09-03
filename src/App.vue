@@ -5,6 +5,8 @@
     <!-- <transition name="">
       <ProductCart v-if="openProdCart" @closeProdCart="prodCart" class="prodCartOverlay" />
     </transition> -->
+    <ProductCart/>
+    <CheckOut/>
   </div>
 </template>
 
@@ -18,7 +20,7 @@ export default {
     HomePage,
     ProductCart
   }
-  // data() {
+   // data() {
   //   return {
   //     openProdCart: false
   //   };

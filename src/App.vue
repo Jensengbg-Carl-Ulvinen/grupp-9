@@ -8,10 +8,13 @@
 
 <script>
 import HomePage from './components/HomePage.vue';
+import ProductCart from './components/ProductCart.vue';
+
 export default {
   name: 'App',
   components: {
-    HomePage
+    HomePage,
+    ProductCart
   }
    // data() {
   //   return {

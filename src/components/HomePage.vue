@@ -2,7 +2,7 @@
   <div id="container">
       <nav class="wrapper">
         <h1 class="heading"> Webshop för iphone skal 
-            <img class="cart" @click="openCart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
+            <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
         </h1>
         <div class="counter">{{cartCounter}}</div>
       </nav>
@@ -10,20 +10,22 @@
         <ul>
             <li v-for="product in products" :key="product.id">
                 {{product.name}} {{product.price}}
+                <button class="add-to-cart" @click="addToCart(product)"> Add to cart </button>
             </li>
         </ul>
       </main>
-      <ProductCart/>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 export default {
+    name: 'HomePage',
     //components: {ProductCart},
     data: function() {
         return {
             products: [],
+            cart: [],
             cartCounter: 0,
             openCart: false
         };
@@ -38,11 +40,12 @@ export default {
     },
     methods: {
         clickCart() {
-            if (this.openCart === true) {
-                this.openCart = false;
-            } else {
-                this.openCart = true;
-            }
+            this.$router.push("/Product-cart");
+        },
+        addToCart(product) {
+            this.cart.push(product);
+            this.cartCounter++;
+            console.log(product);
         }
     }
 }
@@ -70,6 +73,7 @@ body{
      height: auto;
      float: right;
      padding-right: 1rem;
+     cursor: pointer;
 }
 li{
     display: flex;

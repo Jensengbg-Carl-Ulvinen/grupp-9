@@ -22,8 +22,8 @@ it('should display nav-bar when rendered', () => {
 //Kolla om Shoppingcart knappen kommer upp -Carl
 
 it('should display a shoppingcart button in nav', () => {
-  const wrapper = shallowMount(HomePage)
+  const wrapper = shallowMount(HomePage);
   const shoppingCartButton = wrapper.find('.button_checkout');
   const expected = shoppingCartButton;
-  expect(shoppingCartButton).toBe(expected)
+  expect(shoppingCartButton).toBe(expected);
 })

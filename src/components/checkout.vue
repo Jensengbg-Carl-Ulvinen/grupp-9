@@ -1,12 +1,22 @@
 <template>
-  <div class="checkout_page">
+<div class="checkout_page">
+  <button @click="goBack()" class="previous">
+    <img class="previous" src="../assets/img/arrow-down.svg" />
+  </button>
 
-    </div>
+</div>
 </template>
 
 <script>
 export default {
-
+  name: "CheckOut",
+  data: () => {},
+  computed: {},
+  methods: {
+    goBack() {
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 

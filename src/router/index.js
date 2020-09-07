@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '@/components/HomePage.vue'
 import ProductCart from '@/components/ProductCart.vue'
-import checkout from '@/components/checkout.vue'
+import CheckOut from '@/components/CheckOut.vue'
 
 Vue.use(VueRouter);
 
@@ -20,7 +20,7 @@ const routes = [
   {
     path: "/checkout",
     name: "checkout",
-    component: checkout
+    component: CheckOut
   }
 ];
 

@@ -1,38 +1,15 @@
 <template>
   <div id="app">
     <home-page/>
-    <ProductCart /> 
-    <!-- <transition name="">
-      <ProductCart v-if="openProdCart" @closeProdCart="prodCart" class="prodCartOverlay" />
-    </transition> -->
-    <CheckOut/>
   </div>
 </template>
 
 <script>
 import HomePage from './components/HomePage.vue';
-import ProductCart from './components/ProductCart.vue';
 
 export default {
   name: 'App',
-  components: {
-    HomePage,
-    ProductCart
-  }
-   // data() {
-  //   return {
-  //     openProdCart: false
-  //   };
-  // },
-  // methods: {
-  //   prodCart() {
-  //     if (this.openProdCart === true) {
-  //       this.openProdCart = false;
-  //     } else {
-  //       this.openProdCart = true;
-  //     }
-  //   }
-  // }
+  components: { HomePage }
 }
 </script>
 

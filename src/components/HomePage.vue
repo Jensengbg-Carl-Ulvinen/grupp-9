@@ -2,29 +2,32 @@
   <div id="container">
       <nav class="wrapper">
         <h1 class="heading"> Webshop för iphone skal 
-            <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
+            <img class="cart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
         </h1>
         <div class="counter">{{cartCounter}}</div>
       </nav>
       <main>
+          
         <ul>
             <li v-for="product in products" :key="product.id">
                 {{product.name}} {{product.price}}
-                <button class="add-to-cart" @click="addToCart(product)"> Add to cart </button>
+                <button class="add-to-cart" @click="clickCart(product.id)"> Add to cart </button>
             </li>
         </ul>
+        <router-view></router-view>
       </main>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import data from '../server/db.json'
 export default {
     name: 'HomePage',
-    //components: {ProductCart},
+    // components: { ProductCart },
     data: function() {
         return {
-            products: [],
+            products: data['products'],
             cart: [],
             cartCounter: 0,
             openCart: false
@@ -32,15 +35,15 @@ export default {
     },
     async created() {
         try {
-            const res = await axios.get(`http://localhost:3000/products`);
+            const res = await axios.get(`http://localhost:8080/products`);
             this.products = res.data;
         } catch (e) {
             console.log(e);
         }
     },
     methods: {
-        clickCart() {
-            this.$router.push("/Product-cart");
+        clickCart(productId) {
+            this.$router.push({path: `/product-cart/${productId}`});
         },
         addToCart(product) {
             this.cart.push(product);
@@ -52,7 +55,7 @@ export default {
 </script>
 
 <style scoped>
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -68,14 +71,14 @@ body{
     width: 100%;
     text-align: left;
 }
-.cart{
-     width: 2%;
-     height: auto;
-     float: right;
-     padding-right: 1rem;
-     cursor: pointer;
+.cart {
+    width: 2%;
+    height: auto;
+    float: right;
+    padding-right: 1rem;
+    cursor: pointer;
 }
-li{
+li {
     display: flex;
     justify-content: space-between;
     list-style: none;

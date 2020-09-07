@@ -40,7 +40,7 @@ export default {
     },
     methods: {
         clickCart() {
-            this.$router.push("/Product-cart");
+            this.$router.push("/product-cart");
         },
         addToCart(product) {
             this.cart.push(product);
@@ -48,8 +48,7 @@ export default {
             console.log(product);
         }
     }
-  }
-};
+  };
 
 </script>
 

@@ -9,11 +9,15 @@
       <main>
         <ul>
             <li v-for="product in products" :key="product.id">
+               <!-- <img class="iphone" v-bind:src="require(`@assets/images/iphone8-shell.jpg`)">-->
                 {{product.name}} {{product.price}}
                 <button class="add-to-cart" @click="addToCart(product)"> Add to cart </button>
             </li>
         </ul>
       </main>
+      <footer class="footer">
+          <h3>Contact copyright</h3>
+      </footer>
   </div>
 </template>
 
@@ -42,9 +46,12 @@ export default {
         clickCart() {
             this.$router.push("/Product-cart");
         },
-        addToCart(product) {
-            this.cart.push(product);
+       async addToCart(product) {
+           await this.cart.push(product);
             this.cartCounter++;
+            let JSONprod = JSON.stringify(this.cart);
+            localStorage.setItem('cart', JSONprod);
+            console.log(JSON.parse(localStorage['cart']));
             console.log(product);
         }
     }
@@ -79,6 +86,17 @@ li{
     display: flex;
     justify-content: space-between;
     list-style: none;
+}
+.footer{
+    border-top: solid;
+    border-color: #FA8585;
+    background-color: #FA8585;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    word-spacing: 3 rem;
 }
 </style>>
 

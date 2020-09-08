@@ -2,7 +2,7 @@
   <div id="container">
       <nav class="wrapper">
         <h1 class="heading"> Webshop för iphone skal
-            <img class="cart" @click="clickCart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
+            <img class="cart" @click="openCheckOut" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
         </h1>
         <div class="counter">{{cartCounter}}</div>
       </nav>
@@ -48,6 +48,9 @@ export default {
     methods: {
         clickCart(productId) {
             this.$router.push({path: `/product-cart/${productId}`});
+        },
+        openCheckOut() {
+          this.$router.push("/checkout")
         },
        async addToCart(product) {
            await this.cart.push(product);

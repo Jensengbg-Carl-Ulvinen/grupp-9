@@ -1,12 +1,16 @@
 <template>
 
+  <div class="ordercheckout">
+
+
+
   <div class="orderHeader">
     <h1>Din beställning</h1>
     <button @click="goBack()" class="previous">
       <img class="previous" src="../assets/images/arrow-down.svg" /></button>
   </div>
 
-  <li class="order_list" v-else-if="product in cart" :key="product.id">
+   <li class="order_list" v-for="product in cart" :key="product.id">
     <div class="title_product">
       <h2>{{ product.name }}</h2>
     </div>
@@ -30,39 +34,39 @@
   </div>
 
   <div class="button">
-    <button @click="sendOrder(cart)" class="button_checkout">Beställ!</button>
+    <button class="button_checkout">Beställ!</button> -->
   </div>
-
+</div>
 
 </template>
 
 <script>
 
-export default {
-  name: "CheckOut",
-  data: () => {},
-  computed: {
-    sum() {
-      let sum = 0;
-      this.cart.forEach(order => (sum += order.totPrice));
-      return sum;
-    }
-  },
-  methods: {
-    goBack() {
-      this.$router.push("/");
-    },
-    addProd(product) {
-      this.cart.push("addProd", product);
-    },
-    delProd(product) {
-      this.$delete("delProd", product);
-    },
-    sendOrder() {
-      this.$router.push("/orderconfirmation") // Not created yet -Carl
-    }
-  }
-};
+ // export default {
+ //   name: "CheckOut",
+ //   data: () => {},
+ //   computed: {
+ //      sum() {
+ //        let sum = 0;
+ //        this.cart.forEach(order => (sum += order.totPrice));
+ //        return sum;
+ //      }
+ //   },
+ //   methods: {
+ //     goBack() {
+ //       this.$router.push("/");
+ //     },
+ //     addProd(product) {
+ //       this.cart.push("addProd", product);
+ //     },
+ //     delProd(product) {
+ //       this.$delete("delProd", product);
+ //     },
+ //     sendOrder() {
+ //       this.$router.push("/orderconfirmation") // Not created yet -Carl
+ //     }
+ //   }
+ // };
 
 </script>
 

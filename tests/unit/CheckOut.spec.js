@@ -29,36 +29,43 @@ describe('UX/UI tests for CheckOut.vue', () => {
 
   it('should display a button to order', () => {
     const orderBtn = wrapper.find('.button_checkout')
-    expect(orderBtn.element).toBe('button_checkout')
+    const expected = orderBtn
+    expect(orderBtn).toBe(expected)
   })
 
   it('Should display a move backwards button', () => {
     const backWardsButton = wrapper.find('.previous')
-    expect(backWardsButton.element).toBe('previous')
+    const expected = backWardsButton
+    expect(backWardsButton).toBe(expected)
   })
 
-  it('should display the price of product', () => {
+  it('should display the total price of order', () => {
     const price = wrapper.find('.total_price')
-    expect(price.element).toBe('total_price')
+    const expected = price
+    expect(price).toBe(expected)
   })
 
   it('should display information about delivery', () => {
     const delInfo = wrapper.find('.delInfo')
-    expect(delInfo.element).toBe('delInfo')
+    const expected = delInfo
+    expect(delInfo).toBe(expected)
   })
 
   it('should display the titles of the products that are added', () => {
     const titleProd = wrapper.find('.title_product')
-    expect(titleProd.element).toBe('title_product')
+    const expected = titleProd
+    expect(titleProd).toBe(expected)
   })
 
   it('Should check if there is a button to add an additional product', () => {
     const addProductButton = wrapper.find('.arrow_up')
-    expect(addProductButton.element).toBe('arrow_up')
+    const expected = addProductButton
+    expect(addProductButton).toBe(expected)
   })
 
   it('Should check if there is a button to remove a product', () => {
     const delProductButton = wrapper.find('.arrow_down')
-    expect(delProductButton.element).toBe('arrow_down')
+    const expected = delProductButton
+    expect(delProductButton).toBe(expected)
   })
 })

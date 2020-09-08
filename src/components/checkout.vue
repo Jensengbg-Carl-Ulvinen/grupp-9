@@ -16,9 +16,9 @@
       <p>{{ product.price * product.quantity }}kr</p>
       <div class="arrow">
         <div class="vertical">
-          <img @click="addProd(product)" src="../assets/images/arrow-up.svg" />
+          <img class="arrow_up" @click="addProd(product)" src="../assets/images/arrow-up.svg" />
           <h2>{{ product.quantity }}</h2>
-          <img @click="delProd(product)" src="../assets/images/arrow-down.svg" />
+          <img class="arrow_down" @click="delProd(product)" src="../assets/images/arrow-down.svg" />
         </div>
       </div>
     </div>

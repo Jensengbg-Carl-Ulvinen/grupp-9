@@ -1,19 +1,50 @@
-Projektrapport
+Projektrapport 
+ 1) Vilka har arbetat i gruppen? (fullständigt namn och klass) 
+ -  Elizaveta Smirnova - FRK19g, Leon Listo - FRK19g, Carl - FRK19g  Cao 
 
-1) Vilka har arbetat i gruppen? (fullständigt namn och klass)
-2) URL till ert repo på GitHub (se till att repot är publikt så att läraren kan se det)
-3) URL till Trello (se till att läraren kan se er Trello board)
-4) Kravspec (textfil eller länk)
-5) Anteckningar från retrospective
-_______________________________________________________________________________________
-1) 
-Elizaveta Smirnova
-Carl 
-Leon
-Cao
+2) URL till ert repo på GitHub (se till att repot är publikt så att läraren kan se det) 
+ -   https://github.com/Jensengbg-Carl-Ulvinen/grupp-9/tree/master/src 
 
-2) https://github.com/Jensengbg-Carl-Ulvinen/grupp-9/tree/master/src
+3) URL till Trello (se till att läraren kan se er Trello board) 
+ -   https://trello.com/b/C3BAuoMJ/tdd-projekt  
 
-3) https://trello.com/b/C3BAuoMJ/tdd-projekt
+ 4) Kravspec (textfil eller länk)
+ -   https://docs.google.com/document/d/1Jr0z2s1zM1Iiwl41rBcLsEn2STfj5Y_8AYmfn4bBeBQ/edit
 
-4) 
+
+Anteckningar från retrospective 
+
+1. Vad har ni lärt er av projektet?
+    1 Vi har lärt oss hur man har arbetat med TDD. Vi har dessutom lärt oss hur man planerar in test driven utveckling.
+    2 Vi har lärt oss arbeta med git i grupp.
+
+
+2. Hur fördelade ni arbetet? (vem gjorde vad)
+    1 Vi fördelade arbetet i komponenter (vuejs, server och tests/unit)
+    2 Vi skapade en webshop. Eliza - productCart Leon - HomePage Carl - checkout (Pushade commits men lite oklar kommunikation)
+
+
+3. Fundera över vilka ändringar ni skulle göra om ni skulle fortsätta med projektet i samma grupp:
+    Vad skulle vi börja göra?
+    1 Vi skulle ha kommunikation konstant istället för bara i början och slutet.
+    Vad skulle vi sluta göra?
+    2 Pusha koden i develop mer istället för specifika branches.
+    Vad skulle vi fortsätta göra?
+    3 Jätte bra planering av arbetet i början av arbetets gång.
+    4 Dela skärm/kod med gruppen under arbetets gång.
+
+
+4. Vilka krav var svårast respektive lättast att skriva test för?
+    1. Funktionaliteten var svårast att skriva test för.
+    2 Tänket, man behöver tänka annorlunda med testning. Att skriva test först innan koden var en utmaning.
+    3 UI/UX test var lättast att skriva test för.
+
+
+5.  Fanns det något ni hade tänkt göra, som ni inte hann med? Vad berodde det på?
+    1. Det hade kunnat bli en responsiv webshop.
+    2. Det hade kunnat bli en fullständig webshop med alla planerade komponenter.
+    3. Mer tests för funktionaliteten av webshoppen
+    4. Vi hade kunnat testa alla gemensamma komponenter som en helhet, istället för enskilda komponent test.
+
+5.2 För det mesta var vi bara 2 personer som jobbade/kommunisera, vilket i sin tur ledde till att arbetet inte nådde alla mål.
+5.3 Vi hade kunnat planera vad som krävs av varje person under arbetet.

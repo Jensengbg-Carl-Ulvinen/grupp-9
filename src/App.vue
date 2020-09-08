@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <nav class="wrapper">
-        <div class="counter">{{cartCounter}}</div>
+        <h1 class="heading"> Webshop för iphone skal 
+            <img class="cart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
+        </h1>
       </nav>
       <main>
         <router-view></router-view>

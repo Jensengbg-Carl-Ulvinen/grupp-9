@@ -101,6 +101,7 @@ export default {
             }
             orders.push(this.order)
             localStorage.setItem("orders", JSON.stringify(orders))
+            console.log(this.order)
         },
         goToBasket() {
             this.$router.push("/checkout")

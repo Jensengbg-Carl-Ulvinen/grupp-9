@@ -1,11 +1,11 @@
 <template>
   <div id="container">
-      <nav class="wrapper">
+      <!-- <nav class="wrapper">
         <h1 class="heading"> Webshop för iphone skal 
             <img class="cart" v-bind:src="require(`@/assets/images/shopping-cart.png`)">
         </h1>
         <div class="counter">{{cartCounter}}</div>
-      </nav>
+      </nav> -->
       <main class="main"> 
         <ul>
             <li v-for="product in products" :key="product.id">

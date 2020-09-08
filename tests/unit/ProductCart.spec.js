@@ -1,17 +1,6 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import ProductCart from '@/components/ProductCart.vue'
-import checkout from '@/components/checkout.vue'
 import data from '../../src/server/db.json'
-
-// import VueRouter from 'vue-router'
-
-// describe('', () => {
-//     //cart need to testing by ID of product??
-//     it('should display cart when clicked/render cart', () => {
-//         const prodCart = wrapper.find('#prodCart')
-//         expect(prodCart.element.id).toBe('prodCart')
-//     })
-// })
 
 describe('Functional tests for ProductCart', () => {
     let wrapper;
@@ -30,9 +19,13 @@ describe('Functional tests for ProductCart', () => {
         const basketBtn = wrapper.find('#basketBtn')
         await basketBtn.trigger('click')
 
-        const expected = JSON.stringify([{'model': data['models'][0].model, "color": data['colors'][0].color, "quantity": 1}])
+        const expectedModel = data['models'][0].model;
+        const expectedColor = data['colors'][0].color;
+        const expectedQuantity = "1"
 
-        expect(localStorageMock.setItem).toHaveBeenCalledWith("orders", expected)
+        const expectedLocalStorageObject = [{"model": expectedModel, "color": expectedColor, "quantity": expectedQuantity}]
+
+        expect(localStorageMock.setItem).toHaveBeenCalledWith("orders", JSON.stringify(expectedLocalStorageObject))
     })
 
     it('should add correct item into localstorage', async () => {
@@ -112,5 +105,13 @@ describe('UX/UI tests for ProductCart.vue', () => {
         const productNameEl = localWrapper.find("#productName");
 
         expect(productNameEl.text()).toBe(expectedProductName)
+    })
+
+    it('should show buttons when added a product', async () => {
+        const basketBtn = wrapper.find('#basketBtn')
+        await basketBtn.trigger('click')
+
+        const buttons = wrapper.find('#toBuy', '#toBasket')
+        expect(buttons.element.id).toBe('toBuy', 'toBasket') 
     })
 })

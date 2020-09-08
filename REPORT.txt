@@ -1,0 +1,19 @@
+Projektrapport
+
+1) Vilka har arbetat i gruppen? (fullständigt namn och klass)
+2) URL till ert repo på GitHub (se till att repot är publikt så att läraren kan se det)
+3) URL till Trello (se till att läraren kan se er Trello board)
+4) Kravspec (textfil eller länk)
+5) Anteckningar från retrospective
+_______________________________________________________________________________________
+1) 
+Elizaveta Smirnova
+Carl 
+Leon
+Cao
+
+2) https://github.com/Jensengbg-Carl-Ulvinen/grupp-9/tree/master/src
+
+3) https://trello.com/b/C3BAuoMJ/tdd-projekt
+
+4) 

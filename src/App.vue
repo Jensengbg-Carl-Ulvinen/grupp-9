@@ -39,4 +39,23 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.heading {
+  border-bottom: solid;
+  border-color: #FA8585;
+  background-color: #FA8585;
+  margin: 0;
+  padding-top: 1.5rem;
+  margin-left: -0.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: left;
+}
+.cart {
+  width: 2%;
+  height: auto;
+  float: right;
+  padding-right: 1rem;
+  cursor: pointer;
+}
 </style>

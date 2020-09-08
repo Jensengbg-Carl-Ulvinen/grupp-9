@@ -25,7 +25,6 @@
 import data from '../server/db.json'
 export default {
     name: 'HomePage',
-    // components: { ProductCart },
     data: function() {
         return {
             products: data['products'],

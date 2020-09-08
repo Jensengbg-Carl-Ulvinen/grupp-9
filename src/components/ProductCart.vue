@@ -183,6 +183,7 @@ export default {
     height: 3rem;
     background-color: #FA8585;
     border: none;
+    cursor: pointer;
 }
 .btn-basket {
     width: 2.5rem;

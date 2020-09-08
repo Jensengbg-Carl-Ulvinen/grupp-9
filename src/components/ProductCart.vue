@@ -122,6 +122,7 @@ export default {
     font-family: 'Abel', sans-serif;
     letter-spacing: 0.155em;
     color: #000000;
+    margin: 10rem;
 }
 #productName {
     display: flex;

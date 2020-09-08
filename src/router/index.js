@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomePage from '@/components/HomePage.vue'
 import ProductCart from '@/components/ProductCart.vue'
 import CheckOut from '@/components/CheckOut.vue'
+import OrderConfirmation from '@/components/OrderConfirmation.vue'
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/checkout",
     name: "checkout",
     component: CheckOut
+  },
+  {
+    path: "/orderconfirmation",
+    name: "orderconfirmation",
+    component: OrderConfirmation
   }
 ];
 

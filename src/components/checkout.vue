@@ -7,7 +7,7 @@
   <div class="orderHeader">
     <h1>Din beställning</h1>
     <button @click="goBack()" class="previous">
-      <img class="previous" src="../assets/images/arrow-down.svg" /></button>
+      <img class="previous" src="../assets/images/back.png" /></button>
   </div>
 
    <li class="order_list" v-for="product in cart" :key="product.id">
@@ -34,7 +34,7 @@
   </div>
 
   <div class="button">
-    <button class="button_checkout">Beställ!</button> -->
+    <button @click="sendOrder()" class="button_checkout">Beställ</button>
   </div>
 </div>
 
@@ -42,31 +42,31 @@
 
 <script>
 
- // export default {
- //   name: "CheckOut",
- //   data: () => {},
- //   computed: {
- //      sum() {
- //        let sum = 0;
- //        this.cart.forEach(order => (sum += order.totPrice));
- //        return sum;
- //      }
- //   },
- //   methods: {
- //     goBack() {
- //       this.$router.push("/");
- //     },
- //     addProd(product) {
- //       this.cart.push("addProd", product);
- //     },
- //     delProd(product) {
- //       this.$delete("delProd", product);
- //     },
- //     sendOrder() {
- //       this.$router.push("/orderconfirmation") // Not created yet -Carl
- //     }
- //   }
- // };
+ export default {
+    name: "CheckOut",
+   // data: () => {},
+   // computed: {
+   //    sum() {
+   //      let sum = 0;
+   //      this.cart.forEach(order => (sum += order.totPrice));
+   //      return sum;
+   //    }
+   // },
+   methods: {
+     goBack() {
+       this.$router.push("/");
+     },
+     // addProd(product) {
+     //   this.cart.push("addProd", product);
+     // },
+     // delProd(product) {
+     //   this.$delete("delProd", product);
+     // },
+     sendOrder() {
+       this.$router.push("/orderconfirmation") // Not created yet -Carl
+     }
+   }
+ };
 
 </script>
 
@@ -88,5 +88,43 @@ li {
 }
 a {
   color: #42b983;
+}
+
+button{
+  height: 40px;
+  padding: 0.5rem;
+
+  border-radius: 5px;
+}
+
+.previous{
+  border: none !important;
+  background: white;
+}
+
+.button_checkout{
+  font-size: 20px;
+  backgound: red !important;
+  cursor: pointer;
+}
+
+.orderHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 6rem;
+}
+
+img{
+  width: 30px;
+  height: 30px;
 }
 </style>

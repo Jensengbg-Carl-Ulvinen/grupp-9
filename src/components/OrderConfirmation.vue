@@ -1,6 +1,6 @@
 <template>
 
-  <div class="orderconfirmationdiv">
+  <div class="order_status">
     <h3>Tack för din beställning</h3>
   </div>
 

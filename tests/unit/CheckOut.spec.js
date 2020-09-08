@@ -43,9 +43,9 @@ describe('UX/UI tests for CheckOut.vue', () => {
     wrapper = shallowMount(CheckOut);
   })
 
-  it('should display the button to remove multiple items from the basket', () => {
-    const remBtn = wrapper.find('#remBtn')
-    expect(remBtn.element.id).toBe('remBtn')
+  it('should display a button to order', () => {
+    const remBtn = wrapper.find('#button_checkout')
+    expect(remBtn.element.id).toBe('button_checkout')
   })
 
   it('should display the price of product', () => {

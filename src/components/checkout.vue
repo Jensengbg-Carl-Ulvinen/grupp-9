@@ -1,9 +1,6 @@
 <template>
 
   <div class="ordercheckout">
-
-
-
   <div class="orderHeader">
     <h1>Din beställning</h1>
     <button @click="goBack()" class="previous">

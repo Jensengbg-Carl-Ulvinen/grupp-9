@@ -6,16 +6,14 @@
         </h1>
         <div class="counter">{{cartCounter}}</div>
       </nav>
-      <main>
-          
+      <main class="main"> 
         <ul>
             <li v-for="product in products" :key="product.id">
-               <!-- <img class="iphone" v-bind:src="require(`@assets/images/iphone8-shell.jpg`)">-->
+               <img class="iphone" @click="clickCart(product.id)" v-bind:src="require(`@/assets/images/iphone8-shell.jpg`)">
                 {{product.name}} {{product.price}}
-                <button class="add-to-cart" @click="clickCart(product.id)"> Add to cart </button>
+                <!--<button class="add-to-cart" @click="clickCart(product.id)"> Add to cart </button>-->
             </li>
         </ul>
-        <router-view></router-view>
       </main>
       <footer class="footer">
           <h3>Contact copyright</h3>
@@ -24,7 +22,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import data from '../server/db.json'
 export default {
     name: 'HomePage',
@@ -37,26 +34,18 @@ export default {
             openCart: false
         };
     },
-    async created() {
-        try {
-            const res = await axios.get(`http://localhost:8080/products`);
-            this.products = res.data;
-        } catch (e) {
-            console.log(e);
-        }
-    },
     methods: {
         clickCart(productId) {
-            this.$router.push({path: `/product-cart/${productId}`});
-        },
-       async addToCart(product) {
+            this.$router.push({path:`/product-cart/${productId}`});
+        }
+      /* async addToCart(product) {
            await this.cart.push(product);
             this.cartCounter++;
             let JSONprod = JSON.stringify(this.cart);
             localStorage.setItem('cart', JSONprod);
             console.log(JSON.parse(localStorage['cart']));
             console.log(product);
-        }
+        }*/
     }
 }
 </script>
@@ -78,6 +67,9 @@ body {
     width: 100%;
     text-align: left;
 }
+.main{
+    margin-bottom: 10%;
+}
 .cart {
     width: 2%;
     height: auto;
@@ -87,8 +79,13 @@ body {
 }
 li {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     list-style: none;
+}
+.iphone{
+    width: 10%;
+    height: auto;
+        cursor: pointer;
 }
 .footer{
     border-top: solid;

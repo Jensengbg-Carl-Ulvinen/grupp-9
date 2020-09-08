@@ -23,6 +23,14 @@ it('should display nav-bar when rendered', () => {
     expect(text).toBe(expected);
     })
 
+it('should display footer content when rendered', () => {
+    const expected = 'Contact copyright';
+
+    const text = wrapper.find('.footer').text();
+
+    expect(expected).toBe(text);
+})
+
 it('ul should exist', () => {
     const list = wrapper.findAll('ul');
 

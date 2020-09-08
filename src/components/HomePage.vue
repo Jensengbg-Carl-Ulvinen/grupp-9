@@ -10,12 +10,16 @@
 
         <ul>
             <li v-for="product in products" :key="product.id">
+               <!-- <img class="iphone" v-bind:src="require(`@assets/images/iphone8-shell.jpg`)">-->
                 {{product.name}} {{product.price}}
                 <button class="add-to-cart" @click="clickCart(product.id)"> Add to cart </button>
             </li>
         </ul>
         <router-view></router-view>
       </main>
+      <footer class="footer">
+          <h3>Contact copyright</h3>
+      </footer>
   </div>
 </template>
 
@@ -45,9 +49,12 @@ export default {
         clickCart(productId) {
             this.$router.push({path: `/product-cart/${productId}`});
         },
-        addToCart(product) {
-            this.cart.push(product);
+       async addToCart(product) {
+           await this.cart.push(product);
             this.cartCounter++;
+            let JSONprod = JSON.stringify(this.cart);
+            localStorage.setItem('cart', JSONprod);
+            console.log(JSON.parse(localStorage['cart']));
             console.log(product);
         }
     }

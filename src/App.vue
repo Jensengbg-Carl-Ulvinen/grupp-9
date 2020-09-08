@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <nav class="wrapper">
-        <div class="counter">{{cartCounter}}</div>
       </nav>
       <main>
         <router-view></router-view>

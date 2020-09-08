@@ -5,7 +5,7 @@
                 <button> 
                     <img id="back" src="@/assets/images/back.png"> 
                 </button>
-                <p> 
+                <p id="productName"> 
                     {{ products[$route.params.productId]['name'] }}
                 </p>
             </nav>
@@ -58,7 +58,7 @@
                 </form>
 
                 <section id="quantityAndBasket">
-                    <input id="quantityProd" type="number" />
+                    <input id="quantityProd" type="number" min="1" max="20" v-model="quantity"/>
                     <button id="basketBtn" @click="addToBasket">
                         <img class="btn-basket" src="@/assets/images/shopping-cart.png">
                     </button>
@@ -89,7 +89,8 @@ export default {
             models: data['models'],
             colors: data['colors'],
             selectedModel: data['models'][0]['model'],
-            selectedColor:  data['colors'][0]['color']
+            selectedColor:  data['colors'][0]['color'],
+            quantity: 1
         }
     },
     methods: {
@@ -97,7 +98,7 @@ export default {
             const order = {
                 model: this.selectedModel,
                 color: this.selectedColor,
-                quantity: 1 
+                quantity: this.quantity, 
             }
             const orders = localStorage.getItem("orders") ? JSON.parse(localStorage.getItem("orders")) : []
             orders.push(order)

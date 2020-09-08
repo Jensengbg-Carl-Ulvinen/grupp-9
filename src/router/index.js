@@ -13,7 +13,7 @@ const routes = [
     component: HomePage
   },
   {
-    path: "/product-cart",
+    path: "/product-cart/:productId",
     name: "ProductCart",
     component: ProductCart
   },

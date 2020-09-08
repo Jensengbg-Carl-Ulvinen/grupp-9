@@ -2,34 +2,87 @@
     "products": [
         {
             "id": 0,
-            "name": "iphone8-shell",
+            "name": "iPhone Shell",
             "price": "25$"
         },
         {
             "id": 1,
-            "name": "iphone8-shell",
-            "price": "25$"
+            "name": "iPhone Bell",
+            "price": "50$"
         },
         {
             "id": 2,
-            "name": "iphone8-shell",
-            "price": "25$"
+            "name": "iPhone Dell",
+            "price": "75$"
         },
         {
             "id": 3,
-            "name": "iphone8-shell",
-            "price": "25$"
+            "name": "iPhone Mell",
+            "price": "100$"
         },
         {
             "id": 4,
-            "name": "iphone8-shell",
-            "price": "25$"
+            "name": "iPhone Hell",
+            "price": "125$"
         },
         {
             "id": 5,
-            "name": "iphone8-shell",
-            "price": "25$"
+            "name": "iPhone Well",
+            "price": "150$"
         }
     ],
-    "cart": []
+    "cart": [],
+    "models": [
+        { 
+            "model": "iPhone 6", 
+            "value": "0"
+        },
+        { 
+            "model": "iPhone 7",
+            "value": "1"
+        },
+        { 
+            "model": "iPhone 8", 
+            "value": "2" 
+        },
+        { 
+            "model": "iPhone X",
+            "value": "3" 
+        },
+        { 
+            "model": "iPhone 11", 
+            "value": "4" 
+        },
+        { 
+            "model": "iPhone XR", 
+            "value": "5" 
+        }
+    ],
+    "colors": [
+        { 
+            "color": "black", 
+            "value": "0" 
+        },
+        { 
+            "color": "white", 
+            "value": "1" 
+        },
+        { 
+            "color": "red", 
+            "value": "2"
+        },
+        { 
+            "color": "green",
+            "value": "3"
+        },
+        { 
+            "color": "yellow", 
+            "value": "4"
+        },
+        { 
+            "color": "blue", 
+            "value": "5"
+        }
+    ],
+    "basket": []
 }

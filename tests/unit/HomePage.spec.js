@@ -43,6 +43,29 @@ it('should display 0 on homepage when rendered', () => {
     expect(actualValue).toBe(expectedValue);
 })
 
+it('should display add-to-cart buttons', () => {
+    const expected = wrapper.find('.add-to-cart');
+
+    expect(expected.exists()).toBe(true);
+})
+
+describe('Functional tests for HomePage', () => {
+    let wrapper;
+    const $router = { push: jest.fn()}
+    beforeEach(() => {
+        wrapper = shallowMount(HomePage, {mocks: {$router}});
+    })
+    it('should increment counter when adding product', async () => {
+        const expectedValue = 1;
+        const button = wrapper.find('.add-to-cart');
+        const counter = wrapper.find('.counter');
+
+        await button.trigger('click');
+        const actualValue = Number(counter.text());
+        expect(actualValue).toBe(expectedValue);
+    })
+})
+
 
 /*it('emit event', async () => {
     wrapper = mount(HomePage);
